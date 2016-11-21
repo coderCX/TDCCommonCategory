@@ -10,5 +10,7 @@
 #define TDCCommonCategory_h
 
 #import "UIView+TDC.h"
+#import "UIImage+Fit.h"
+#import "UIColor+HexColor.h"
 
 #endif /* TDCCommonCategory_h */
