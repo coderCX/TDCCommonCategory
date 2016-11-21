@@ -2,6 +2,7 @@
 
 #import "UIImage+Fit.h"
 #import "UIImage+ImageEffects.h"
+#import "UIColor+HexColor.h"
 
 @implementation UIImage (Fit)
 
