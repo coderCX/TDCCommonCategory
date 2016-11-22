@@ -12,5 +12,6 @@
 #import "UIView+TDC.h"
 #import "UIImage+Fit.h"
 #import "UIColor+HexColor.h"
+#import "UILabel+TDC.h"
 
 #endif /* TDCCommonCategory_h */
