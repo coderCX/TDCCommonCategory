@@ -28,4 +28,15 @@
     return titleLabel;
 }
 
+- (void)setLineText:(NSString *)text lineSpace:(NSInteger)lineSpace fontSize:(NSInteger)fontSize
+           fontName:(NSString *)fontName{
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:text];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:lineSpace];//调整行间距
+    [self setFont:[UIFont fontWithName:fontName size:fontSize]];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [text length])];
+    self.attributedText = attributedString;
+    self.lineBreakMode = NSLineBreakByWordWrapping|NSLineBreakByTruncatingTail;
+}
+
 @end

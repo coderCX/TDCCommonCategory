@@ -30,4 +30,14 @@
 
 
 
+/**
+ 设置Label的富文本属性  可以设置label的行间距、字体等
+
+ @param text      文本内容
+ @param lineSpace 行间距
+ @param fontSize  字体大小
+ @param fontName  字体名称
+ */
+- (void)setLineText:(NSString *)text lineSpace:(NSInteger)lineSpace fontSize:(NSInteger)fontSize
+           fontName:(NSString *)fontName;
 @end
