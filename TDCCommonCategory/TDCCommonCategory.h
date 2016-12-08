@@ -14,5 +14,6 @@
 #import "UIColor+HexColor.h"
 #import "UILabel+TDC.h"
 #import "UIBarButtonItem+TDC.h"
+#import "NSDate+TDC.h"
 
 #endif /* TDCCommonCategory_h */
