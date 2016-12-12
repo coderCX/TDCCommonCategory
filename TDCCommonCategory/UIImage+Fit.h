@@ -28,4 +28,21 @@
  */
 - (UIImage *)blurImage:(CGRect)rect;
 
+
+/**
+ 返回gifimage
+
+ @param theData 本地图片资源
+ @return
+ */
++ (UIImage *)animatedImageWithAnimatedGIFData:(NSData *)theData;
+
+/**
+ 返回gifimage
+ 
+ @param theData 网络图片资源
+ @return
+ */
++ (UIImage *)animatedImageWithAnimatedGIFURL:(NSURL *)theURL;
+
 @end
