@@ -15,6 +15,7 @@
                                           size:(CGSize)size
                                         margin:(CGFloat)margin
                                   targetAction:(SEL)targetAction
+                                           sel:(id)sel
                                           font:(CGFloat)font{
     
     UIButton *backButton =  [[UIButton alloc] init];
@@ -22,7 +23,7 @@
     backButton.titleLabel.font = [UIFont systemFontOfSize:font];
     backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     [backButton setTitle:title forState:UIControlStateNormal];
-    [backButton addTarget:self action:targetAction forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:sel action:targetAction forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
@@ -34,13 +35,14 @@
                                          size:(CGSize)size
                                        margin:(CGFloat)margin
                                  targetAction:(SEL)targetAction
+                                  sel:(id)sel
                                          font:(CGFloat)font{
     UIButton *backButton =  [[UIButton alloc] init];
     backButton.tdc_size = size;
     backButton.titleLabel.font = [UIFont systemFontOfSize:font];
     backButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [backButton setTitle:title forState:UIControlStateNormal];
-    [backButton addTarget:self action:targetAction forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:sel action:targetAction forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
@@ -52,11 +54,12 @@
                                      size:(CGSize)size
                                    margin:(CGFloat)margin
                              targetAction:(SEL)targetAction
+                              sel:(id)sel
                                      font:(CGFloat)font{
     UIButton *backButton =  [[UIButton alloc] init];
     backButton.tdc_size = size;
     [backButton setImage:image forState:UIControlStateNormal];
-    [backButton addTarget:self action:targetAction forControlEvents:UIControlEventTouchUpInside];
+    [backButton addTarget:sel action:targetAction forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc]
                                        initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace
                                        target:nil action:nil];
