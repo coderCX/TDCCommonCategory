@@ -15,5 +15,6 @@
 #import "UILabel+TDC.h"
 #import "UIBarButtonItem+TDC.h"
 #import "NSDate+TDC.h"
+#import "NSString+Util.h"
 
 #endif /* TDCCommonCategory_h */
