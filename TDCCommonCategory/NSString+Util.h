@@ -42,9 +42,8 @@
 +(CGSize) contentSizeOfStr:(NSString *) str withFont:(UIFont*)font constrainedToSize:(CGSize) size;
 
 /**
- * 获取sha加密和UUID
+ * 获取UUID
  */
-- (NSString *)sha1;
 
 + (NSString *)uuid;
 
