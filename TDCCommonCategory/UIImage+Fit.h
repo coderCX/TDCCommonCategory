@@ -23,11 +23,6 @@
  */
 - (UIImage *)cutCircleImage;
 
-/**
- 根据Rect为图片设置高斯模糊
- */
-- (UIImage *)blurImage:(CGRect)rect;
-
 
 /**
  返回gifimage
