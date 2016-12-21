@@ -1,7 +1,6 @@
 
 
 #import "UIImage+Fit.h"
-#import "UIImage+ImageEffects.h"
 #import "UIColor+HexColor.h"
 #import <ImageIO/ImageIO.h>
 

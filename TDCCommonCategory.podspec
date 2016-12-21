@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = 'TDCCommonCategory'
-    s.version      = '1.1.3'
+    s.version      = '1.1.4'
     s.summary      = 'An easy way to use category'
     s.homepage     = 'https://github.com/coderCX/TDCCommonCategory'
     s.license      = 'MIT'
