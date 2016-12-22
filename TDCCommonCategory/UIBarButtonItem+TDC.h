@@ -28,6 +28,7 @@
                                              margin:(CGFloat)margin
                                              targetAction:(SEL)targetAction
                                              sel:(id)sel
+                                         color:(UIColor *)color
                                              font:(CGFloat)font;
 
 /**
@@ -47,6 +48,7 @@
                                         margin:(CGFloat)margin
                                   targetAction:(SEL)targetAction
                                   sel:(id)sel
+                                color:(UIColor *)color
                                           font:(CGFloat)font;
 /**
  快速在导航栏  左边/右边  创建一个带有文字的 UIBarButtonItem
