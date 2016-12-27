@@ -15,4 +15,6 @@
 @property (assign, nonatomic) CGFloat tdc_h;
 @property (assign, nonatomic) CGSize tdc_size;
 @property (assign, nonatomic) CGPoint tdc_origin;
+@property (nonatomic, assign) CGFloat tdc_centerX;
+@property (nonatomic, assign) CGFloat tdc_centerY;
 @end
