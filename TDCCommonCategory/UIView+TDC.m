@@ -7,6 +7,8 @@
 //
 
 #import "UIView+TDC.h"
+#import "UILabel+TDC.h"
+
 #define kMargin 10
 @implementation UIView (TDC)
 
