@@ -7,7 +7,7 @@
 //
 
 #import "UIView+TDC.h"
-
+#define kMargin 10
 @implementation UIView (TDC)
 
 - (void)setTdc_x:(CGFloat)tdc_x
@@ -100,6 +100,66 @@
     CGPoint tempF = self.center;
     tempF.y = tdc_centerY;
     self.center = tempF;
+}
+
++(void)moveAlertWithContent:(NSString *)content
+                   backView:(UIView *)backView
+                   isHidden:(BOOL)isHidden
+                 isShowHorn:(BOOL)isShowHorn
+   animateWithDurationBegin:(NSInteger)animateWithDurationBegin
+     animateWithDurationEnd:(NSInteger)animateWithDurationEnd
+{
+    UIView *view = [[UIView alloc] init];
+    view.backgroundColor = TDCNavgationColor;
+    [backView addSubview:view];
+    
+    UILabel *label = [UILabel setLabelWithTextColor:[UIColor whiteColor]
+                                           fontSize:13 text:content
+                                       textAligment:NSTextAlignmentLeft
+                                             isBold:NO];
+    UIImageView *hornView;
+    // 如果需要显示 小喇叭
+    if (isShowHorn){
+        hornView = [[UIImageView alloc] initWithImage:[UIImage resizeImage:@"ic_laba"]]; // 54*52
+        hornView.frame = CGRectMake(kMargin,2,26,27);
+        [view addSubview:hornView];
+    }
+    if (isShowHorn) {
+        label.tdc_w = TDC_SCREEN_WIDTH - 2*kMargin - 26;
+        label.tdc_x = 2*kMargin + 26;
+    }else{
+        label.tdc_w = TDC_SCREEN_WIDTH - 2*kMargin;
+        label.tdc_x = kMargin;
+    }
+    label.numberOfLines = 0;
+    label.backgroundColor = TDCNavgationColor;
+    CGSize tempSize = [label sizeThatFits:CGSizeMake(label.tdc_w,80)];
+    label.tdc_y = 0;
+    if (isShowHorn){
+        if (tempSize.height>=29) {
+            label.tdc_h = tempSize.height;
+        }else{
+            label.tdc_h = 29;
+        }
+    }else{
+        label.tdc_h = tempSize.height;
+    }
+    view.frame = CGRectMake(0,-label.tdc_h,TDC_SCREEN_WIDTH,label.tdc_h);
+    [view addSubview:label];
+    [UIView animateWithDuration:animateWithDurationBegin animations:^{
+        // 往下移动一个label的高度
+        view.transform = CGAffineTransformMakeTranslation(0,label.tdc_h);
+    } completion:^(BOOL finished) { // 向下移动完毕
+        if (isHidden) {
+            [UIView animateWithDuration:animateWithDurationBegin delay:animateWithDurationEnd options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                // 恢复到原来的位置
+                view.transform = CGAffineTransformIdentity;
+            } completion:^(BOOL finished) {
+                // 删除控件
+                [view removeFromSuperview];
+            }];
+        }
+    }];
 }
 
 @end
