@@ -16,7 +16,7 @@
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
     effectView.frame = CGRectMake(rect.origin.x,rect.origin.y,rect.size.width, rect.size.height);
-    effectView.alpha = 0.85;
+    effectView.alpha = 0.85;//
     [self addSubview:effectView];
 }
 
