@@ -10,12 +10,13 @@
 
 @implementation UIImageView (TDC)
 
+//透明度
 - (void)addBlurEffectWithRect:(CGRect)rect
 {
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
     effectView.frame = CGRectMake(rect.origin.x,rect.origin.y,rect.size.width, rect.size.height);
-    effectView.alpha = .85f;
+    effectView.alpha = 0.85;
     [self addSubview:effectView];
 }
 
